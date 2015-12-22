@@ -1,0 +1,11 @@
+{
+  "name": "mean-demo",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bower": "^1.6.3",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.11",
+    "nodemon": "^1.7.1"
+  }
+}

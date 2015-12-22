@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div ng-controller="MeetupCtrl as vm">
+			<h1>There are {{vm.meetups.length}} meetups</h1>
+			<ul>
+				<li ng-repeat="meetup in vm.meetups">
+					{{meetup.date}}: {{meetup.title}}
+				</li>
+			</ul>
+			<form ng-submit="vm.createMeetup()">
+				<input type="text" placeholder="Date" ng-model="vm.date"></input>
+				<input type="text" placeholder="Title" ng-model="vm.title"></input>
+				<button type="submit" id="submit" value="submit">Add</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+		<script type="text/javascript" src="./app.js"></script>
+		<script type="text/javascript" src="./meetupCtrl.js"></script>
+	</body>
+</html>
